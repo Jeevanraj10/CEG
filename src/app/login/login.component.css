@@ -1,0 +1,15 @@
+#btn {
+    position: relative;
+    top: 8px;
+}
+
+.register {
+    position: relative;
+    top: 18px;
+    left: 50px;
+}
+
+.register a {
+    color: #5bc0de;
+    text-decoration: none;
+}
