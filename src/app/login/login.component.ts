@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   submitted = false;
   returnUrl: string;
 
-  constructor(private formBuilder: FormBuilder, private router: Router,private userService:UserService) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private userService: UserService) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -27,12 +27,14 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
+    console.log(this.loginForm.value);
+
 
   }
   get f() {
     return this.loginForm.controls;
   }
-  onRegister(){
+  onRegister() {
     this.userService.onRegister();
   }
 }

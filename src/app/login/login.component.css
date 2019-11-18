@@ -3,13 +3,36 @@
     top: 8px;
 }
 
+.btn-info {
+    background: #5bc0de;
+}
+
+.custom-checkbox {
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #5bc0de;
+}
+
 .register {
     position: relative;
-    top: 18px;
-    left: 50px;
+    top: 30px;
+    text-align: center;
 }
 
 .register a {
+    position: relative;
     color: #5bc0de;
     text-decoration: none;
+    margin-left: 5px;
 }
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
