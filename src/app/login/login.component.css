@@ -36,3 +36,10 @@
     min-width: 50px;
     text-align: center;
   }
+  .logo{
+      text-align: center;
+  }
+  .jumbotron{
+    height: 100%;
+    width: 100%;
+  }

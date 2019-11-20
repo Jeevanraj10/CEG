@@ -1,1 +1,18 @@
-<p>reister works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <h2>Register</h2>
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" required placeholder="email" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" required placeholder="password" formControlName="password">
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
