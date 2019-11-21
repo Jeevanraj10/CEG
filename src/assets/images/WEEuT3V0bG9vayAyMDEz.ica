@@ -13,41 +13,41 @@ Version=2
 VirtualCOMPortEmulation=On
 
 [ApplicationServers]
-Skype for Business=
+Outlook 2013=
 
-[Skype for Business]
-Address=;10;STA298663142;99DC89E380E9B6A29F6CC9E508D5AF
+[Outlook 2013]
+Address=;10;STA288658831;BFF46B6681E897B3F9A36E17521073
 AutologonAllowed=ON
 BrowserProtocol=HTTPonTCP
-ClearPassword=CDF66DAAC3CF01
+ClearPassword=4CC1837133EB58
 ClientAudio=On
 DesiredColor=8
 DesiredHRES=0
 DesiredVRES=0
-Domain=\7294DD2104D19D50
+Domain=\15B4CFB2C274F223
 DoNotUseDefaultCSL=On
 FontSmoothingType=0
 HDXoverUDP=Off
 HTTPBrowserAddress=!
-InitialProgram=#Skype for Business
+InitialProgram=#Outlook 2013
 Launcher=WI
-LaunchReference=CA4385B34566AADF13BD44869BE0D1
+LaunchReference=524854C932126968BBA062282A652B
 LocHttpBrowserAddress=!
-LogonTicket=CDF66DAAC3CF017294DD2104D19D50
+LogonTicket=4CC1837133EB5815B4CFB2C274F223
 LogonTicketType=CTXS1
 LongCommandLine=
-LPWD=1124
-NRWD=531
+LPWD=968
+NRWD=437
 ProxyTimeout=30000
 ProxyType=Auto
 SecureChannelProtocol=Detect
-SessionsharingKey=732WFg3PKUmOA96GUyYSssp1ZhGeXStV
+SessionsharingKey=rNLgj5RzTg0MkIKNAbLwlQy7Aqm64rlC
 SFRAllowed=Off
 SSLCiphers=all
 SSLEnable=On
 SSLProxyHost=vwp.jpto.sonymobile.com:443
-startSCD=1574238911879
-Title=Skype for Business
+startSCD=1574313295928
+Title=Outlook 2013
 TransportDriver=TCP/IP
 TRWD=0
 TWIMode=On

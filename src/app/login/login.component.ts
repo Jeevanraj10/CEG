@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../_services/user.service';
+import { AuthService, AuthResponseData } from '../_services/auth.services';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +12,12 @@ import { UserService } from '../_services/user.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  loading = false;
+  isLoading = false;
   submitted = false;
   returnUrl: string;
+  error: string = null;
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private userService: UserService) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -27,20 +30,34 @@ export class LoginComponent implements OnInit {
   get f() {
     return this.loginForm.controls;
   }
-  onSubmit() {
+  onSubmit(form: FormGroup) {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.loginForm.invalid) {
+    if (!this.loginForm.valid) {
       return;
     }
+    this.isLoading = true;
+    const email = form.value.email;
+    const password = form.value.password;
+
+    let authObs: Observable<AuthResponseData>;
+    
+    authObs = this.authService.signIn(email, password);
+
+    authObs.subscribe(
+      (responseData) => {
+        console.log(responseData);
+        this.isLoading = false;
+        this.router.navigate(['/home'])
+
+      },
+      (errorMessage) => {
+        console.log(errorMessage);
+        this.error = errorMessage;
+        this.isLoading = false;
+      });
     console.log("The login form data", this.loginForm);
-    const status = this.loginForm.controls.email.status;
-    console.log("the status:" + status);
+    // this.loginForm.reset();
   }
-
-  onRegister() {
-    this.userService.onRegister();
-  }
-
 }

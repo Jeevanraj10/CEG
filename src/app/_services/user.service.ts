@@ -6,9 +6,6 @@ import { Router } from '@angular/router';
 })
 export class UserService {
 
-  constructor(private router:Router) { }
+  constructor() { }
 
-  onRegister(){
-    this.router.navigate(['/register']);
-  }
 }

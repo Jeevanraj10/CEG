@@ -9,12 +9,16 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { AlertService } from './_services/alert.service';
 import { RegisterComponent } from './register/register.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoadingSpinnerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
