@@ -1,5 +1,17 @@
-<div class="container">
-    <div class="row">
-        <h3>Welcome you're logged in</h3>
+<div>
+    <ul class="nav navbar-nav">
+        <li routerLinkActive="active" *ngIf="!isAuthenticated">
+            <a routerLink="/recipes">Recipes-1</a>
+        </li>
+        <li routerLinkActive="active" *ngIf="isAuthenticated">
+            <a routerLink="/recipes">Recipes-2</a>
+        </li>
+    </ul>
+    <div>
+        <ul class="nav navbar-nav navbar-right" style="cursor:pointer;">
+            <li *ngIf="!isAuthenticated">
+                <a routerLink="">Logout</a>
+            </li>
+        </ul>
     </div>
 </div>
